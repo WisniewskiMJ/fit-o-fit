@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8'
 gem 'devise-i18n', '~> 1.10'
 gem 'devise-bootstrap-views', '~> 1.1'
+gem 'haml-rails', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
