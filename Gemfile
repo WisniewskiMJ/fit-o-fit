@@ -31,10 +31,12 @@ gem 'devise', '~> 4.8'
 gem 'devise-i18n', '~> 1.10'
 gem 'devise-bootstrap-views', '~> 1.1'
 gem 'haml-rails', '~> 2.0'
+gem 'google-maps', '~> 3.0', '>= 3.0.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 end
 
 group :development do
