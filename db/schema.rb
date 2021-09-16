@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_15_120127) do
+ActiveRecord::Schema.define(version: 2021_09_15_175904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.bigint "distance", null: false
+    t.integer "start", null: false
+    t.integer "finish", null: false
+    t.date "day", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["day"], name: "index_activities_on_day"
+    t.index ["finish"], name: "index_activities_on_finish"
+    t.index ["start"], name: "index_activities_on_start"
+  end
 
   create_table "places", force: :cascade do |t|
     t.string "address", null: false

@@ -2,6 +2,8 @@ class Place < ApplicationRecord
   validates :address, presence: true
   validates :latitude, presence: { message: "Specify valid address" }
 
+  belongs_to :activity
+
   before_validation :geocode
 
   private
