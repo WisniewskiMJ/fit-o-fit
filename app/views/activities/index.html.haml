@@ -1,0 +1,9 @@
+.container
+  .row
+    .col-lg-9.d-flex.flex-column.ps-5.pe-5
+      .fs-2.fw-bold.text-center.text-uppercase.mb-4
+        my activities
+      = render @activities 
+    .col-lg-3.d-flex.flex-column.ps-5.pe-5
+      = link_to 'DASHBOARD', root_url, class: "btn btn-secondary btn-lg mb-4"
+      = link_to 'Logout', destroy_user_session_url, method: :delete, class: "btn btn-secondary"

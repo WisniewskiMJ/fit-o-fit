@@ -1,6 +1,10 @@
 class ActivitiesController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @activities = current_user.activities
+  end
+
   def new
   end
   
@@ -26,7 +30,7 @@ class ActivitiesController < ApplicationController
     @activity = current_user.activities.build(start_id: start.id, finish_id: finish.id, day: day)
     if @activity.save
       flash[:success] = "New activity added"
-      redirect_to @activity
+      redirect_to root_url
     else
       flash[:danger] = "Day can't be blank"
       redirect_to new_activity_url
