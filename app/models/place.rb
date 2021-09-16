@@ -1,10 +1,10 @@
 class Place < ApplicationRecord
-  validates :address, presence: true
-  validates :latitude, presence: { message: "Specify valid address" }
+  validates :address, presence: { message: "is not valid" }
+  validates_format_of :address, with: /\A\s*\D+\s\d+\s*[,]\s*\D+\s*[,]\s*[a-zA-z]+\s*\z/
 
-  belongs_to :activity
+  has_many :activities
 
-  before_validation :geocode
+  before_save :geocode
 
   private
 
@@ -22,6 +22,8 @@ class Place < ApplicationRecord
        country == address_split[:country] 
         self.latitude = place_data.latitude
         self.longitude = place_data.longitude
+    else
+      self.address = nil
     end
     
   end

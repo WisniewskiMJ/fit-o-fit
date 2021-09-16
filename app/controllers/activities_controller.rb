@@ -5,45 +5,46 @@ class ActivitiesController < ApplicationController
   end
   
   def create
-    start_address = params[:activity][:start_address]
-    finish_address = params[:activity][:finish_address]
-    day = params[:activity][:day]
+    start_address = activity_params[:start_address]
+    finish_address = activity_params[:finish_address]
+    day = activity_params[:day]
 
-    start = Place.find_by(address: start_address)
-    start ||= Place.new(address: start_address)
+    start = Place.find_or_initialize_by(address: activity_params[:start_address])
+    finish = Place.find_or_initialize_by(address: activity_params[:finish_address])
    
     if !start.valid?
-      flash[:warning] = "Enter a valid start address using correct format!"
-      redirect_to :new
-    end
-
-    finish = Place.find_by(address: finish_address)
-    finish ||= Place.new(address: finish_address)
-
-    if !finish.valid?
-      flash[:warning] = "Enter a valid finish address using correct format!"
-      redirect_to :new
+      flash[:danger] = "Enter a valid start address using correct format!"
+      redirect_to new_activity_url and return
+    elsif !finish.valid?
+      flash[:danger] = "Enter a valid finish address using correct format!"
+      redirect_to new_activity_url and return
     end
 
     start.save
     finish.save
 
     @activity = current_user.activities.build(start_id: start.id, finish_id: finish.id, day: day)
-    
     if @activity.save
       flash[:success] = "New activity added"
       redirect_to @activity
     else
-      flash[:warning] = "Could not add new activity. Check if parameters are valid"
-      redirect_to :new 
+      flash[:danger] = "Day can't be blank"
+      redirect_to new_activity_url
     end
 
   end
 
   def show
+    @activity = Activity.find_by(id: params[:id])
   end
 
   def destroy
+  end
+
+  private
+
+  def activity_params
+    params.require(:activity).permit(:start_address, :finish_address, :day)
   end
 
 end

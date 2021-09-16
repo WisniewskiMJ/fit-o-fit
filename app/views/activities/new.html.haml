@@ -1,0 +1,14 @@
+.container
+  %h1 Add activity
+  = form_for(:activity, url: activities_path) do |f|
+    .form-group.mb-4
+      = f.label :start_address
+      = f.text_field :start_address, autofocus: true, class: 'form-control'
+    .form-group.mb-4
+      = f.label :finish_address
+      = f.text_field :finish_address, class: 'form-control'
+    .form-group.mb-4
+      = f.label :day
+      = f.date_field :day, class: 'form-control'
+    .form-group.mb-4
+      = f.submit 'Add', class: 'btn btn-primary'

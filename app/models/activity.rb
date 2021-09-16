@@ -2,11 +2,12 @@ class Activity < ApplicationRecord
   validates :start, presence: true
   validates :finish, presence: true
   validates :distance, presence: true
+  validates :day, presence: true
 
-  has_one :start,
+  belongs_to :start,
   class_name: :Place
 
-  has_one :finish,
+  belongs_to :finish,
   class_name: :Place
 
   belongs_to :user
@@ -16,6 +17,6 @@ class Activity < ApplicationRecord
   private
 
   def set_distance
-    distance = Google::Maps.distance_matrix(start.address, finish.address).distance
+    self.distance = Google::Maps.distance_matrix(start.address, finish.address).distance
   end
 end
