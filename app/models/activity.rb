@@ -9,6 +9,8 @@ class Activity < ApplicationRecord
   has_one :finish,
   class_name: :Place
 
+  belongs_to :user
+
   before_validation :set_distance
 
   private

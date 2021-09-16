@@ -16,15 +16,17 @@ ActiveRecord::Schema.define(version: 2021_09_15_175904) do
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
+    t.integer "user_id", null: false
     t.bigint "distance", null: false
-    t.integer "start", null: false
-    t.integer "finish", null: false
+    t.integer "start_id", null: false
+    t.integer "finish_id", null: false
     t.date "day", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["day"], name: "index_activities_on_day"
-    t.index ["finish"], name: "index_activities_on_finish"
-    t.index ["start"], name: "index_activities_on_start"
+    t.index ["finish_id"], name: "index_activities_on_finish_id"
+    t.index ["start_id"], name: "index_activities_on_start_id"
+    t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
   create_table "places", force: :cascade do |t|
