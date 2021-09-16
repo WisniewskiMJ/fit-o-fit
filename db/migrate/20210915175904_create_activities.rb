@@ -2,7 +2,7 @@ class CreateActivities < ActiveRecord::Migration[6.1]
   def change
     create_table :activities do |t|
       t.integer :user_id, null: false, foreign_key: true
-      t.bigint :distance, null: false
+      t.float :distance, null: false
       t.integer :start_id, null: false, foreign_key: true
       t.integer :finish_id, null: false, foreign_key: true
       t.date :day, null: false

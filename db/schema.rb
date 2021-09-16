@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_09_15_175904) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.bigint "distance", null: false
+    t.float "distance", null: false
     t.integer "start_id", null: false
     t.integer "finish_id", null: false
     t.date "day", null: false

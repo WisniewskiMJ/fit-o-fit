@@ -17,6 +17,7 @@ class Activity < ApplicationRecord
   private
 
   def set_distance
-    self.distance = Google::Maps.distance_matrix(start.address, finish.address).distance
+    distance = Google::Maps.distance_matrix(start.address, finish.address).distance
+    self.distance = (distance / 1000.0).round(2)
   end
 end
