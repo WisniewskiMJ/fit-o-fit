@@ -17,7 +17,7 @@ class Activity < ApplicationRecord
   private
 
   def set_distance
-    distance = Google::Maps.distance_matrix(start.address, finish.address).distance
+    distance = Google::Maps.distance_matrix(start.address, finish.address, {mode: :walking}).distance
     self.distance = (distance / 1000.0).round(2)
   end
 end
