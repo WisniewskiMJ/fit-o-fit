@@ -7,6 +7,10 @@ Live version of application: https://fit-o-fit.herokuapp.com
 ### Setup
 
 To run locally, you have to have Ruby version 3.0.2 installed on your machine.
+Then clone repository"
+```
+git clone https://github.com/WisniewskiMJ/fit-o-fit
+```
 Next you have to execute 
 ```
 .bin/setup
