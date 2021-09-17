@@ -1,5 +1,6 @@
 .container
   %h1 Add activity
+  %p.text-muted Address format: "street_name street number, town, country" in polish, e.g. "Towarowa 1, Warszawa, Polska"
   = form_for(:activity, url: activities_path) do |f|
     .form-group.mb-4
       = f.label :start_address
