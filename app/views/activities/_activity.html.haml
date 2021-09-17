@@ -3,7 +3,7 @@
     .d-flex.flex-column
       .text-muted.mb-3
         = activity.day.to_s(:long_ordinal)
-      .d-flex.flex-row.fw-bold
+      .d-flex.flex-row.font-weight-bold
         #{activity.start.address} - #{activity.finish.address}
-    .fs-2.align-self-center
+    %h3.align-self-center
       #{activity.distance} km

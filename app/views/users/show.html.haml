@@ -1,17 +1,15 @@
-.container
-  .row
-    .col-lg-9.d-flex.flex-column.ps-5.pe-5
-      .fs-3.text-muted
-        Name
-      .fs-1.mb-5.fw-bold
-        = @user.name.upcase
-      .fs-3.text-muted
-        E-mail
-      .fs-1.fw-bold
-        = @user.email
-    .col-lg-3.d-flex.flex-column.ps-5.pe-5.border-start.border-warning
-      -if @user == current_user
-        = link_to 'DASHBOARD', root_url, class: "btn btn-secondary btn-lg mb-4"
-        = link_to 'Edit account details', edit_user_registration_url, class: "btn btn-secondary mb-4"
-        = link_to 'Delete account', user_registration_url, method: :delete, class: "btn btn-secondary mb-4"
-        = link_to 'Logout', destroy_user_session_url, method: :delete, class: "btn btn-secondary"
+.col-lg-9.d-flex.flex-column.pl-5.pr-5
+  %h3.text-muted
+    Name
+  %h1.mb-5.font-weight-bold
+    = @user.name.upcase
+  %h3.text-muted
+    E-mail
+  %h2.font-weight-bold
+    = @user.email
+.col-lg-3.d-flex.flex-column.pl-5.pr-5.border-start.border-warning
+  -if @user == current_user
+    = link_to 'DASHBOARD', root_url, class: "btn btn-secondary btn-lg mb-4"
+    = link_to 'Edit account details', edit_user_registration_url, class: "btn btn-secondary mb-4"
+    = link_to 'Delete account', user_registration_url, method: :delete, class: "btn btn-secondary mb-4"
+    = link_to 'Logout', destroy_user_session_url, method: :delete, class: "btn btn-secondary"
