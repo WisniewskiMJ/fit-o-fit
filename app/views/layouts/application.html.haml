@@ -10,10 +10,5 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .position-fixed.vw-100.d-flex.flex-column.on-top
-    - flash.each do |category, message| 
-      %div{ class: "bg-#{category} bg-gradient text-white text-center full-width p-2"}
-        = message
-    %p.notice= notice
-    %p.alert= alert
+    = render 'shared/flash'  
     = yield

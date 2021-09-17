@@ -1,0 +1,3 @@
+- flash.each do |category, message| 
+  %div{ class: "alert #{category == 'alert' ? 'alert-danger' : 'alert-success'}"}
+    = message

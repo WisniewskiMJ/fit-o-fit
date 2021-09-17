@@ -17,10 +17,10 @@ class ActivitiesController < ApplicationController
     finish = Place.find_or_initialize_by(address: activity_params[:finish_address])
    
     if !start.valid?
-      flash[:danger] = "Enter a valid start address using correct format!"
+      flash[:alert] = "Enter a valid start address using correct format!"
       redirect_to new_activity_url and return
     elsif !finish.valid?
-      flash[:danger] = "Enter a valid finish address using correct format!"
+      flash[:alert] = "Enter a valid finish address using correct format!"
       redirect_to new_activity_url and return
     end
 
@@ -29,10 +29,10 @@ class ActivitiesController < ApplicationController
 
     @activity = current_user.activities.build(start_id: start.id, finish_id: finish.id, day: day)
     if @activity.save
-      flash[:success] = "New activity added"
+      flash[:notice] = "New activity added"
       redirect_to root_url
     else
-      flash[:danger] = "Day can't be blank"
+      flash[:alert] = "Day can't be blank"
       redirect_to new_activity_url
     end
 
