@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @activities = current_user.activities
+    @activities = current_user.activities.order(day: :desc)
   end
 
   def new
