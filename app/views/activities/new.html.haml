@@ -1,13 +1,13 @@
 .container
   %h1 Add activity
-  %p.text-muted Address format: "street_name street number, town, country" in polish, e.g. "Towarowa 1, Warszawa, Polska"
+  %p.text-muted Address format: "street_name street number, town, country"
   = form_for(:activity, url: activities_path) do |f|
     .form-group.mb-4
       = f.label :start_address
-      = f.text_field :start_address, class: 'form-control'
+      = f.text_field :start_address, placeholder: "e.g., Towarowa 1, Warszawa, Polska", class: 'form-control'
     .form-group.mb-4
       = f.label :finish_address
-      = f.text_field :finish_address, class: 'form-control input-field'
+      = f.text_field :finish_address,placeholder: "e.g., Anielewicza 1, Warszawa, Polska", class: 'form-control input-field'
     .form-group.mb-4
       = f.label :day
       = f.date_field :day, class: 'form-control'
