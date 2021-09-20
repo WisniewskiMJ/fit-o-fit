@@ -1,0 +1,9 @@
+.container-fluid
+  .full-height.d-flex.flex-column.justify-content-between.align-items-center
+    %h1.mt-5.font-weight-bold fitOfit
+    .p-2.mt-2.d-flex.flex-column.align-items-center
+      = link_to 'Log in', new_user_session_url, class: 'btn btn-secondary btn-lg mt-3 mb-5'
+    .p-2.d-flex.flex-column.align-items-center
+      %p.fs-5.text-warning Haven't got an account?
+      %h2 Register now
+      = link_to 'Sign up', new_user_registration_url, class: 'btn btn-secondary btn-lg mt-3'
