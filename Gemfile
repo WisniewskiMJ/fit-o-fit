@@ -32,11 +32,15 @@ gem 'devise-i18n', '~> 1.10'
 gem 'devise-bootstrap-views', '~> 1.1'
 gem 'haml-rails', '~> 2.0'
 gem 'google-maps', '~> 3.0', '>= 3.0.6'
+gem 'factory_bot_rails', '~> 6.2'
+gem 'faker', '~> 2.19'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
 end
 
 group :development do
@@ -51,5 +55,8 @@ group :development do
   gem 'letter_opener', '~> 1.7'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'capybara', '~> 3.36'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+end
