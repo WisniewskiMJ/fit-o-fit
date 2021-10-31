@@ -32,5 +32,4 @@ to allow connection to Google Maps API.
 
 This is basic version of application, due to time limit. Things that need to be added:
 
-* Refactor error messages
 * Tests

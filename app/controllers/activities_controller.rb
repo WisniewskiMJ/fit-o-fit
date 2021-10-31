@@ -9,33 +9,14 @@ class ActivitiesController < ApplicationController
   end
   
   def create
-    start_address = activity_params[:start_address]
-    finish_address = activity_params[:finish_address]
-    day = activity_params[:day]
-
-    start = Place.find_or_initialize_by(address: activity_params[:start_address])
-    finish = Place.find_or_initialize_by(address: activity_params[:finish_address])
-   
-    if !start.valid?
-      flash[:alert] = "Enter a valid start address using correct format!"
-      redirect_to new_activity_url and return
-    elsif !finish.valid?
-      flash[:alert] = "Enter a valid finish address using correct format!"
-      redirect_to new_activity_url and return
-    end
-
-    start.save
-    finish.save
-
-    @activity = current_user.activities.build(start_id: start.id, finish_id: finish.id, day: day)
-    if @activity.save
+    result = ActivityCreator.call(activity_params, current_user)
+    if result.created?
       flash[:notice] = "New activity added"
       redirect_to root_url
     else
-      flash[:alert] = "Day can't be blank"
+      flash[:alert] = result.payload.errors.full_messages
       redirect_to new_activity_url
     end
-
   end
 
   def show
