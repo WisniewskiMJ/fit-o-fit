@@ -1,6 +1,6 @@
 class Activity < ApplicationRecord
-  validates :start, presence: true
-  validates :finish, presence: true
+  validates :start_id, presence: true
+  validates :finish_id, presence: true
   validates :distance, presence: true
   validates :day, presence: true
 
