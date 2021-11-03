@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
   end
   
   def create
-    result = ActivityCreator.call(activity_params, current_user)
+    result = ActivityServices::ActivityCreator.call(activity_params, current_user)
     if result.created?
       flash[:notice] = "New activity added"
       redirect_to root_url

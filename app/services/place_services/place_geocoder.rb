@@ -11,7 +11,7 @@ module PlaceServices
       number = components["street_number"].first if components.has_key?("street_number")
       town = components["locality"].first if components.has_key?("locality")
       country = components["country"].first if components.has_key?("country")
-      if street == address_split[:street] && number == address_split[:number] &&
+      if street.include?(address_split[:street]) && number == address_split[:number] &&
           town == address_split[:town] && country == address_split[:country] 
       
         coordinates = { latitude: place_data.latitude, longitude: place_data.longitude }

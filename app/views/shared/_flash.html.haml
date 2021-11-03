@@ -1,4 +1,7 @@
 - flash.each do |category, message| 
   %div{ class: "alert #{category == 'alert' ? 'alert-danger' : 'alert-success'}"}
-    - message.each do |m|
-      %p #{m.capitalize}
+    - if message.instance_of?(Array)
+      - message.each do |m|
+        %p #{m.capitalize}
+    - else
+      = message
