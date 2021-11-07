@@ -59,4 +59,6 @@ group :test do
   gem 'shoulda-matchers', '~> 5.0'
   gem 'capybara', '~> 3.36'
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+  gem 'vcr', '~> 6.0'
+  gem 'webmock', '~> 3.14'
 end

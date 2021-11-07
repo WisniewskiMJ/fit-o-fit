@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept:
+      - "*/*"
+      Date:
+      - Sun, 07 Nov 2021 18:27:19 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 07 Nov 2021 18:27:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Warsaw
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=7
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Towarowa",
+                       "short_name" : "Towarowa",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Wola",
+                       "short_name" : "Wola",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Mazowieckie",
+                       "short_name" : "Mazowieckie",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "Polska",
+                       "short_name" : "PL",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "00-811",
+                       "short_name" : "00-811",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Towarowa 1, 00-811 Warszawa, Polska",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 52.2261574,
+                       "lng" : 20.9874064
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 52.2275063802915,
+                          "lng" : 20.9887553802915
+                       },
+                       "southwest" : {
+                          "lat" : 52.2248084197085,
+                          "lng" : 20.98605741970849
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJa28qCJrMHkcR1z_HWbC96rY",
+                 "plus_code" : {
+                    "compound_code" : "6XGP+FX Warszawa, Polska",
+                    "global_code" : "9G426XGP+FX"
+                 },
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 07 Nov 2021 18:27:19 GMT
+recorded_with: VCR 6.0.0

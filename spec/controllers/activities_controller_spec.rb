@@ -16,7 +16,7 @@ RSpec.describe ActivitiesController, type: :controller do
   end
 
   describe 'POST#create' do
-    context 'with valid params' do
+    context 'with valid params', :vcr do
       let(:start) { "Towarowa 1, Warszawa, Polska" }
       let(:finish) { "Puławska 35, Warszawa, Polska" }
       let(:valid_params) { { start_address: start, finish_address: finish, day: Date.today } }
@@ -38,7 +38,7 @@ RSpec.describe ActivitiesController, type: :controller do
       end
     end
 
-      context 'with invalid params' do
+      context 'with invalid params', :vcr do
       let(:start) { "Towarowa 1" }
       let(:finish) { "Puławska 35, Warszawa, Polska" }
       let(:invalid_params) { { start_address: start, finish_address: finish, day: Date.today } }

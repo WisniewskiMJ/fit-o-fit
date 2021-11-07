@@ -1,0 +1,334 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept:
+      - "*/*"
+      Date:
+      - Sun, 07 Nov 2021 19:10:15 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 07 Nov 2021 19:10:15 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Warsaw
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=43
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Towarowa",
+                       "short_name" : "Towarowa",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Wola",
+                       "short_name" : "Wola",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Mazowieckie",
+                       "short_name" : "Mazowieckie",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "Polska",
+                       "short_name" : "PL",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "00-811",
+                       "short_name" : "00-811",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Towarowa 1, 00-811 Warszawa, Polska",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 52.2261574,
+                       "lng" : 20.9874064
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 52.2275063802915,
+                          "lng" : 20.9887553802915
+                       },
+                       "southwest" : {
+                          "lat" : 52.2248084197085,
+                          "lng" : 20.98605741970849
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJa28qCJrMHkcR1z_HWbC96rY",
+                 "plus_code" : {
+                    "compound_code" : "6XGP+FX Warszawa, Polska",
+                    "global_code" : "9G426XGP+FX"
+                 },
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 07 Nov 2021 19:10:16 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Pu%C5%82awska%2035,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept:
+      - "*/*"
+      Date:
+      - Sun, 07 Nov 2021 19:10:16 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 07 Nov 2021 19:10:16 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Warsaw
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=315
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "35",
+                       "short_name" : "35",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Puławska",
+                       "short_name" : "Puławska",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Mokotów",
+                       "short_name" : "Mokotów",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Warszawa",
+                       "short_name" : "Warszawa",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Mazowieckie",
+                       "short_name" : "Mazowieckie",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "Polska",
+                       "short_name" : "PL",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "02-508",
+                       "short_name" : "02-508",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Puławska 35, 02-508 Warszawa, Polska",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 52.2079453,
+                          "lng" : 21.02252
+                       },
+                       "southwest" : {
+                          "lat" : 52.2077277,
+                          "lng" : 21.0222322
+                       }
+                    },
+                    "location" : {
+                       "lat" : 52.2077925,
+                       "lng" : 21.0223665
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 52.2091854802915,
+                          "lng" : 21.0237250802915
+                       },
+                       "southwest" : {
+                          "lat" : 52.2064875197085,
+                          "lng" : 21.0210271197085
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJsyt_NN_MHkcRWvyNY_9V660",
+                 "types" : [ "premise" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 07 Nov 2021 19:10:16 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=Pu%C5%82awska%2035,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl&mode=walking&origins=Towarowa%201,%20Warszawa,%20Polska
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept:
+      - "*/*"
+      Date:
+      - Sun, 07 Nov 2021 19:10:16 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 07 Nov 2021 19:10:17 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      X-Goog-Maps-Metro-Area:
+      - Warsaw
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=279
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "destination_addresses" : [ "Puławska 35, 02-508 Warszawa, Polska" ],
+           "origin_addresses" : [ "Towarowa 1, 00-811 Warszawa, Polska" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "3,6 km",
+                          "value" : 3607
+                       },
+                       "duration" : {
+                          "text" : "46 min",
+                          "value" : 2735
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 07 Nov 2021 19:10:17 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Piecki,%20Polska&key=<gmaps_api_key>&language=pl
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept:
+      - "*/*"
+      Date:
+      - Sun, 07 Nov 2021 18:27:19 GMT
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 07 Nov 2021 18:27:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=15
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Piecki",
+                       "short_name" : "Piecki",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Powiat mrągowski",
+                       "short_name" : "Powiat mrągowski",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Warmińsko-Mazurskie",
+                       "short_name" : "Warmińsko-Mazurskie",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "Polska",
+                       "short_name" : "PL",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "11",
+                       "short_name" : "11",
+                       "types" : [ "postal_code", "postal_code_prefix" ]
+                    }
+                 ],
+                 "formatted_address" : "Piecki, Polska",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 53.77811639999999,
+                          "lng" : 21.3540989
+                       },
+                       "southwest" : {
+                          "lat" : 53.7430067,
+                          "lng" : 21.3214296
+                       }
+                    },
+                    "location" : {
+                       "lat" : 53.7650906,
+                       "lng" : 21.3379504
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 53.77811639999999,
+                          "lng" : 21.3540989
+                       },
+                       "southwest" : {
+                          "lat" : 53.7430067,
+                          "lng" : 21.3214296
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJX6TFMnsD4kYR2ldSqtKPz1c",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Sun, 07 Nov 2021 18:27:19 GMT
+recorded_with: VCR 6.0.0
