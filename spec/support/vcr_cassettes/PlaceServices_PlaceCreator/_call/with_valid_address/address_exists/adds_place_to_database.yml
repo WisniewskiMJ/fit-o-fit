@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Pu%C5%82awska%2035,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
     body:
       encoding: UTF-8
       string: ''
@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Sun, 07 Nov 2021 20:26:49 GMT
+      - Sun, 07 Nov 2021 20:26:51 GMT
   response:
     status:
       code: 200
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 07 Nov 2021 20:26:50 GMT
+      - Sun, 07 Nov 2021 20:26:51 GMT
       Pragma:
       - no-cache
       Expires:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=24
+      - gfet4t7; dur=5
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -57,18 +57,18 @@ http_interactions:
               {
                  "address_components" : [
                     {
-                       "long_name" : "35",
-                       "short_name" : "35",
+                       "long_name" : "1",
+                       "short_name" : "1",
                        "types" : [ "street_number" ]
                     },
                     {
-                       "long_name" : "Puławska",
-                       "short_name" : "Puławska",
+                       "long_name" : "Towarowa",
+                       "short_name" : "Towarowa",
                        "types" : [ "route" ]
                     },
                     {
-                       "long_name" : "Mokotów",
-                       "short_name" : "Mokotów",
+                       "long_name" : "Wola",
+                       "short_name" : "Wola",
                        "types" : [ "political", "sublocality", "sublocality_level_1" ]
                     },
                     {
@@ -92,44 +92,38 @@ http_interactions:
                        "types" : [ "country", "political" ]
                     },
                     {
-                       "long_name" : "02-508",
-                       "short_name" : "02-508",
+                       "long_name" : "00-811",
+                       "short_name" : "00-811",
                        "types" : [ "postal_code" ]
                     }
                  ],
-                 "formatted_address" : "Puławska 35, 02-508 Warszawa, Polska",
+                 "formatted_address" : "Towarowa 1, 00-811 Warszawa, Polska",
                  "geometry" : {
-                    "bounds" : {
-                       "northeast" : {
-                          "lat" : 52.2079453,
-                          "lng" : 21.02252
-                       },
-                       "southwest" : {
-                          "lat" : 52.2077277,
-                          "lng" : 21.0222322
-                       }
-                    },
                     "location" : {
-                       "lat" : 52.2077925,
-                       "lng" : 21.0223665
+                       "lat" : 52.2261574,
+                       "lng" : 20.9874064
                     },
                     "location_type" : "ROOFTOP",
                     "viewport" : {
                        "northeast" : {
-                          "lat" : 52.2091854802915,
-                          "lng" : 21.0237250802915
+                          "lat" : 52.2275063802915,
+                          "lng" : 20.9887553802915
                        },
                        "southwest" : {
-                          "lat" : 52.2064875197085,
-                          "lng" : 21.0210271197085
+                          "lat" : 52.2248084197085,
+                          "lng" : 20.98605741970849
                        }
                     }
                  },
-                 "place_id" : "ChIJsyt_NN_MHkcRWvyNY_9V660",
-                 "types" : [ "premise" ]
+                 "place_id" : "ChIJa28qCJrMHkcR1z_HWbC96rY",
+                 "plus_code" : {
+                    "compound_code" : "6XGP+FX Warszawa, Polska",
+                    "global_code" : "9G426XGP+FX"
+                 },
+                 "types" : [ "street_address" ]
               }
            ],
            "status" : "OK"
         }
-  recorded_at: Sun, 07 Nov 2021 20:26:50 GMT
+  recorded_at: Sun, 07 Nov 2021 20:26:51 GMT
 recorded_with: VCR 6.0.0

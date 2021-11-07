@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Pu%C5%82awska%2035,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Piecki,%20Polska%20&key=<gmaps_api_key>&language=pl
     body:
       encoding: UTF-8
       string: ''
@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Sun, 07 Nov 2021 20:26:49 GMT
+      - Sun, 07 Nov 2021 20:26:51 GMT
   response:
     status:
       code: 200
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 07 Nov 2021 20:26:50 GMT
+      - Sun, 07 Nov 2021 20:26:51 GMT
       Pragma:
       - no-cache
       Expires:
@@ -30,8 +30,6 @@ http_interactions:
       - no-cache, must-revalidate
       Access-Control-Allow-Origin:
       - "*"
-      X-Goog-Maps-Metro-Area:
-      - Warsaw
       Server:
       - mafe
       X-Xss-Protection:
@@ -39,7 +37,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=24
+      - gfet4t7; dur=12
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -57,33 +55,18 @@ http_interactions:
               {
                  "address_components" : [
                     {
-                       "long_name" : "35",
-                       "short_name" : "35",
-                       "types" : [ "street_number" ]
-                    },
-                    {
-                       "long_name" : "Puławska",
-                       "short_name" : "Puławska",
-                       "types" : [ "route" ]
-                    },
-                    {
-                       "long_name" : "Mokotów",
-                       "short_name" : "Mokotów",
-                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
-                    },
-                    {
-                       "long_name" : "Warszawa",
-                       "short_name" : "Warszawa",
+                       "long_name" : "Piecki",
+                       "short_name" : "Piecki",
                        "types" : [ "locality", "political" ]
                     },
                     {
-                       "long_name" : "Warszawa",
-                       "short_name" : "Warszawa",
+                       "long_name" : "Powiat mrągowski",
+                       "short_name" : "Powiat mrągowski",
                        "types" : [ "administrative_area_level_2", "political" ]
                     },
                     {
-                       "long_name" : "Mazowieckie",
-                       "short_name" : "Mazowieckie",
+                       "long_name" : "Warmińsko-Mazurskie",
+                       "short_name" : "Warmińsko-Mazurskie",
                        "types" : [ "administrative_area_level_1", "political" ]
                     },
                     {
@@ -92,44 +75,45 @@ http_interactions:
                        "types" : [ "country", "political" ]
                     },
                     {
-                       "long_name" : "02-508",
-                       "short_name" : "02-508",
-                       "types" : [ "postal_code" ]
+                       "long_name" : "11",
+                       "short_name" : "11",
+                       "types" : [ "postal_code", "postal_code_prefix" ]
                     }
                  ],
-                 "formatted_address" : "Puławska 35, 02-508 Warszawa, Polska",
+                 "formatted_address" : "Piecki, Polska",
                  "geometry" : {
                     "bounds" : {
                        "northeast" : {
-                          "lat" : 52.2079453,
-                          "lng" : 21.02252
+                          "lat" : 53.77811639999999,
+                          "lng" : 21.3540989
                        },
                        "southwest" : {
-                          "lat" : 52.2077277,
-                          "lng" : 21.0222322
+                          "lat" : 53.7430067,
+                          "lng" : 21.3214296
                        }
                     },
                     "location" : {
-                       "lat" : 52.2077925,
-                       "lng" : 21.0223665
+                       "lat" : 53.7650906,
+                       "lng" : 21.3379504
                     },
-                    "location_type" : "ROOFTOP",
+                    "location_type" : "APPROXIMATE",
                     "viewport" : {
                        "northeast" : {
-                          "lat" : 52.2091854802915,
-                          "lng" : 21.0237250802915
+                          "lat" : 53.77811639999999,
+                          "lng" : 21.3540989
                        },
                        "southwest" : {
-                          "lat" : 52.2064875197085,
-                          "lng" : 21.0210271197085
+                          "lat" : 53.7430067,
+                          "lng" : 21.3214296
                        }
                     }
                  },
-                 "place_id" : "ChIJsyt_NN_MHkcRWvyNY_9V660",
-                 "types" : [ "premise" ]
+                 "partial_match" : true,
+                 "place_id" : "ChIJX6TFMnsD4kYR2ldSqtKPz1c",
+                 "types" : [ "locality", "political" ]
               }
            ],
            "status" : "OK"
         }
-  recorded_at: Sun, 07 Nov 2021 20:26:50 GMT
+  recorded_at: Sun, 07 Nov 2021 20:26:51 GMT
 recorded_with: VCR 6.0.0

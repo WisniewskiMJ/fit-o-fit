@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Sun, 07 Nov 2021 18:27:18 GMT
+      - Sun, 07 Nov 2021 20:26:52 GMT
   response:
     status:
       code: 200
@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 07 Nov 2021 18:27:19 GMT
+      - Sun, 07 Nov 2021 20:26:52 GMT
       Pragma:
       - no-cache
       Expires:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=31
+      - gfet4t7; dur=10
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -125,5 +125,5 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Sun, 07 Nov 2021 18:27:19 GMT
+  recorded_at: Sun, 07 Nov 2021 20:26:52 GMT
 recorded_with: VCR 6.0.0
