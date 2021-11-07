@@ -18,8 +18,8 @@ module ActivityServices
         result = OpenStruct.new({created?: true, payload: activity})
       else
         activity = Activity.new
-        activity.errors.add :start, :start_address, message: start.errors.full_messages if !start.valid?
-        activity.errors.add :finish, :finish_address, message: finish.errors.full_messages if !finish.valid?
+        activity.errors.add :start, :start_address, message: start.errors.full_messages if !start.persisted?
+        activity.errors.add :finish, :finish_address, message: finish.errors.full_messages if !finish.persisted?
         activity.errors.add :day, :day_blank, message: "can`t be blank!" if !@day.present?
         result = OpenStruct.new({created?: false, payload: activity})
       end

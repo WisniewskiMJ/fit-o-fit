@@ -9,12 +9,11 @@ module PlaceServices
       if place.valid?
         geocode = PlaceServices::PlaceGeocoder.call(place)
         if geocode.successfull?
-          place.latitude = geocode.coordinates[:latitude]
-          place.longitude = geocode.coordinates[:longitude]
+          place = geocode.payload
           place.save
           result = OpenStruct.new({created?: true, payload: place})
         else
-          place.errors.add :base, :address_invalid, message: geocode.error
+          place.errors.add :base, :address_mismatched, message: geocode.payload.errors.full_messages
           result = OpenStruct.new({created?: false, payload: place})
         end
       else
