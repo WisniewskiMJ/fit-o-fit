@@ -15,7 +15,7 @@ RSpec.describe PagesController, type: :controller do
     end
 
     context 'user is logged in' do
-      let (:user) { create(:user) }
+      let(:user) { create(:user) }
       before do
         sign_in user
         get :welcome
@@ -30,7 +30,7 @@ RSpec.describe PagesController, type: :controller do
   end
 
   describe 'GET#dashboard' do
-    let (:user) { create(:user) }
+    let(:user) { create(:user) }
     before do
       sign_in user
       get :dashboard

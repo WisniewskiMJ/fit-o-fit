@@ -2,45 +2,30 @@
 
 module PlaceServices
   class PlaceGeocoder < ApplicationService
-    def initialize(place)
+    def initialize(place:)
       @place = place
     end
 
     def call
-      geocoder_data = Google::Maps.geocode(@place.address).first
+      return gmaps_geocode if gmaps_api_key_present?
 
-      if addresses_match?(geocoder_data.components)
-        @place.latitude = geocoder_data.latitude
-        @place.longitude = geocoder_data.longitude
-        result = OpenStruct.new({ successfull?: true, payload: @place })
-      else
-        @place.errors.add :address, :address_faulty, message: 'couldn`t be matched with coordinates'
-        result = OpenStruct.new({ successfull?: false, payload: @place })
-      end
+      graphhopper_geocode
     end
 
     private
 
-    def place_address
-      parts = @place.address.split(',')
-      street_address_parts = parts[0].split(' ')
-      address_hash = { street: street_address_parts[0].strip,
-                       number: street_address_parts[1].strip,
-                       town: parts[1].strip,
-                       country: parts[2].strip }
+    attr_reader :place
+
+    def gmaps_geocode
+      Geocoders::GmapsGeocoder.call(place: place)
     end
 
-    def geocoder_address(components)
-      address_hash = {}
-      address_hash[:street] = components['route'].first if components.key?('route')
-      address_hash[:number] = components['street_number'].first if components.key?('street_number')
-      address_hash[:town] = components['locality'].first if components.key?('locality')
-      address_hash[:country] = components['country'].first if components.key?('country')
-      address_hash
+    def graphhopper_geocode
+      Geocoders::GraphhopperGeocoder.call(place: place)
     end
 
-    def addresses_match?(geocoder_data)
-      place_address == geocoder_address(geocoder_data)
+    def gmaps_api_key_present?
+      ENV['GMAPS_API_KEY'].present?
     end
   end
 end

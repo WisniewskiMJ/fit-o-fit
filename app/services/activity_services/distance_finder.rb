@@ -1,14 +1,37 @@
 module ActivityServices
   class DistanceFinder < ApplicationService
-    def initialize(start_address, finish_address)
-      @start_address = start_address
-      @finish_address = finish_address
+    def initialize(start_point:, finish_point:)
+      @start_point = start_point
+      @finish_point = finish_point
     end
 
     def call
-      distance = Google::Maps.distance_matrix(@start_address, @finish_address, {mode: :walking})
-                             .distance
-      distance_km = (distance / 1000.0).round(2)
+      make_request
+      distance_in_km
+    end
+
+    private
+
+    attr_reader :start_point, :finish_point
+    attr_accessor :response
+
+    def make_request
+      self.response = Adapters::GraphhopperRouteAdapter.new(payload).call
+    end
+
+    def distance_in_km
+      (distance / 1000.0).round(2)
+    end
+
+    def distance
+      response['paths'][0]['distance']
+    end
+
+    def payload
+      {
+        start_point: start_point,
+        finish_point: finish_point
+      }
     end
   end
 end

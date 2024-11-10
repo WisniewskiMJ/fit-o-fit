@@ -2,118 +2,51 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Piecki,%20Polska%20&key=<gmaps_api_key>&language=pl
+    uri: https://graphhopper.com/api/1/geocode?debug=false&key=d0179386-cebf-4f3b-9e8a-067140d1f585&limit=5&locale=en&q=Towarowa%201,%20Piecki,%20Polska%20&reverse=false
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Date:
-      - Sun, 07 Nov 2021 20:26:51 GMT
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 07 Nov 2021 20:26:51 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
       Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=12
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Accept-Ranges:
-      - none
+      - nginx
+      Date:
+      - Sun, 10 Nov 2024 01:53:04 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '599'
+      Connection:
+      - keep-alive
       Vary:
       - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset,X-RateLimit-Credits
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Remaining:
+      - '482'
+      X-Ratelimit-Reset:
+      - '79615'
+      X-Ratelimit-Credits:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
     body:
-      encoding: UTF-8
-      string: |
-        {
-           "results" : [
-              {
-                 "address_components" : [
-                    {
-                       "long_name" : "Piecki",
-                       "short_name" : "Piecki",
-                       "types" : [ "locality", "political" ]
-                    },
-                    {
-                       "long_name" : "Powiat mrągowski",
-                       "short_name" : "Powiat mrągowski",
-                       "types" : [ "administrative_area_level_2", "political" ]
-                    },
-                    {
-                       "long_name" : "Warmińsko-Mazurskie",
-                       "short_name" : "Warmińsko-Mazurskie",
-                       "types" : [ "administrative_area_level_1", "political" ]
-                    },
-                    {
-                       "long_name" : "Polska",
-                       "short_name" : "PL",
-                       "types" : [ "country", "political" ]
-                    },
-                    {
-                       "long_name" : "11",
-                       "short_name" : "11",
-                       "types" : [ "postal_code", "postal_code_prefix" ]
-                    }
-                 ],
-                 "formatted_address" : "Piecki, Polska",
-                 "geometry" : {
-                    "bounds" : {
-                       "northeast" : {
-                          "lat" : 53.77811639999999,
-                          "lng" : 21.3540989
-                       },
-                       "southwest" : {
-                          "lat" : 53.7430067,
-                          "lng" : 21.3214296
-                       }
-                    },
-                    "location" : {
-                       "lat" : 53.7650906,
-                       "lng" : 21.3379504
-                    },
-                    "location_type" : "APPROXIMATE",
-                    "viewport" : {
-                       "northeast" : {
-                          "lat" : 53.77811639999999,
-                          "lng" : 21.3540989
-                       },
-                       "southwest" : {
-                          "lat" : 53.7430067,
-                          "lng" : 21.3214296
-                       }
-                    }
-                 },
-                 "partial_match" : true,
-                 "place_id" : "ChIJX6TFMnsD4kYR2ldSqtKPz1c",
-                 "types" : [ "locality", "political" ]
-              }
-           ],
-           "status" : "OK"
-        }
-  recorded_at: Sun, 07 Nov 2021 20:26:51 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJoaXRzIjpbeyJwb2ludCI6eyJsYXQiOjUzLjc0OTE3ODYsImxuZyI6MjEuMzQxMjE5OX0sImV4dGVudCI6WzIxLjI5OTk3MDEsNTMuNzIzNzAyNiwyMS40MDM3NDQ1LDUzLjc4MzEwOThdLCJuYW1lIjoiUGllY2tpIiwiY291bnRyeSI6IlBvbGFuZCIsImNvdW50cnljb2RlIjoiUEwiLCJzdGF0ZSI6Ildhcm1pYW4tTWFzdXJpYW4gVm9pdm9kZXNoaXAiLCJwb3N0Y29kZSI6IjExLTcxMCIsIm9zbV9pZCI6Njg1MTg3Niwib3NtX3R5cGUiOiJSIiwib3NtX2tleSI6InBsYWNlIiwib3NtX3ZhbHVlIjoidmlsbGFnZSJ9LHsicG9pbnQiOnsibGF0Ijo1Mi42Nzk3MTI3LCJsbmciOjE4LjQwMjc3MzZ9LCJuYW1lIjoiUGllY2tpIiwiY291bnRyeSI6IlBvbGFuZCIsImNvdW50cnljb2RlIjoiUEwiLCJzdGF0ZSI6Ikt1eWF2aWFuLVBvbWVyYW5pYW4gVm9pdm9kZXNoaXAiLCJwb3N0Y29kZSI6Ijg4LTE1MCIsIm9zbV9pZCI6NjkyNjI0MTE4LCJvc21fdHlwZSI6Ik4iLCJvc21fa2V5IjoicGxhY2UiLCJvc21fdmFsdWUiOiJ2aWxsYWdlIn0seyJwb2ludCI6eyJsYXQiOjUxLjc0ODE2NzQ1LCJsbmciOjE5LjQzNTI3NzY1fSwiZXh0ZW50IjpbMTkuNDM1MTU5LDUxLjc0ODAzODgsMTkuNDM1Mzk2Myw1MS43NDgyOTYxXSwibmFtZSI6IsWBw7NkxbogS2FsaXNrYSBUb3dhcm93YSIsImNvdW50cnkiOiJQb2xhbmQiLCJjb3VudHJ5Y29kZSI6IlBMIiwiY2l0eSI6IsWBw7NkxboiLCJzdGF0ZSI6IsWBw7NkxbogVm9pdm9kZXNoaXAiLCJzdHJlZXQiOiJHZW5lcmHFgmEgV2FsZXJlZ28gV3LDs2JsZXdza2llZ28iLCJwb3N0Y29kZSI6Ijk0LTEwMyIsIm9zbV9pZCI6MTA4ODAzMTA3LCJvc21fdHlwZSI6IlciLCJob3VzZW51bWJlciI6IjMzIiwib3NtX2tleSI6ImJ1aWxkaW5nIiwib3NtX3ZhbHVlIjoidHJhaW5fc3RhdGlvbiIsImhvdXNlX251bWJlciI6IjMzIn0seyJwb2ludCI6eyJsYXQiOjUzLjc3MDMxNTcsImxuZyI6MjEuMzQ1MjUyfSwibmFtZSI6Ik9zdHLDs3cgUGllY2tvd3NraSIsImNvdW50cnkiOiJQb2xhbmQiLCJjb3VudHJ5Y29kZSI6IlBMIiwiY2l0eSI6IlBpZWNraSIsInN0YXRlIjoiV2FybWlhbi1NYXN1cmlhbiBWb2l2b2Rlc2hpcCIsInBvc3Rjb2RlIjoiMTEtNzEwIiwib3NtX2lkIjozMTUyMTgzNSwib3NtX3R5cGUiOiJOIiwib3NtX2tleSI6InBsYWNlIiwib3NtX3ZhbHVlIjoiaGFtbGV0In0seyJwb2ludCI6eyJsYXQiOjUzLjcxOTQ0MzE1MDAwMDAwNCwibG5nIjoyMS4zMTQ5ODMwODg4NDQ0MTh9LCJleHRlbnQiOlsyMS4xNjExNzg0LDUzLjYyNTUxMSwyMS41MjIzMzY4LDUzLjgxNDM1ODNdLCJuYW1lIjoiZ21pbmEgUGllY2tpIiwiY291bnRyeSI6IlBvbGFuZCIsImNvdW50cnljb2RlIjoiUEwiLCJzdGF0ZSI6Ildhcm1pYW4tTWFzdXJpYW4gVm9pdm9kZXNoaXAiLCJwb3N0Y29kZSI6IjExLTcxMCIsIm9zbV9pZCI6Mjk5MTI5Nywib3NtX3R5cGUiOiJSIiwib3NtX2tleSI6ImJvdW5kYXJ5Iiwib3NtX3ZhbHVlIjoiYWRtaW5pc3RyYXRpdmUifV0sImxvY2FsZSI6ImVuIn0=
+  recorded_at: Sun, 10 Nov 2024 01:53:04 GMT
 recorded_with: VCR 6.0.0

@@ -11,5 +11,4 @@ RSpec.describe Place, type: :model do
     it { is_expected.to have_many(:activities_started) }
     it { is_expected.to have_many(:activities_finished) }
   end
-
 end

@@ -1,76 +1,99 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=Marsza%C5%82kowska%201,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl&mode=walking&origins=Towarowa%201,%20Warszawa,%20Polska
+    method: post
+    uri: https://graphhopper.com/api/1/route?key=d0179386-cebf-4f3b-9e8a-067140d1f585
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"points":[[20.987053,52.2264294],[20.99787875814951,52.2494588]],"profile":"foot"}'
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Date:
-      - Sun, 07 Nov 2021 22:07:52 GMT
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 07 Nov 2021 22:07:52 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      X-Goog-Maps-Metro-Area:
-      - Warsaw
       Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=49
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Accept-Ranges:
-      - none
+      - nginx
+      Date:
+      - Sun, 27 Oct 2024 15:50:37 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1585'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset,X-RateLimit-Credits
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Remaining:
+      - '496'
+      X-Ratelimit-Reset:
+      - '29362'
+      X-Ratelimit-Credits:
+      - '1'
       Vary:
       - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
     body:
-      encoding: UTF-8
-      string: |
-        {
-           "destination_addresses" : [ "Marszałkowska 1, 00-026 Warszawa, Polska" ],
-           "origin_addresses" : [ "Towarowa 1, 00-811 Warszawa, Polska" ],
-           "rows" : [
-              {
-                 "elements" : [
-                    {
-                       "distance" : {
-                          "text" : "3,0 km",
-                          "value" : 3037
-                       },
-                       "duration" : {
-                          "text" : "38 min",
-                          "value" : 2285
-                       },
-                       "status" : "OK"
-                    }
-                 ]
-              }
-           ],
-           "status" : "OK"
-        }
-  recorded_at: Sun, 07 Nov 2021 22:07:52 GMT
+      encoding: ASCII-8BIT
+      string: '{"hints":{"visited_nodes.sum":258,"visited_nodes.average":258.0},"info":{"copyrights":["GraphHopper","OpenStreetMap
+        contributors"],"took":3,"road_data_timestamp":"2024-10-25T23:00:00Z"},"paths":[{"distance":3513.798,"weight":2135.908281,"time":2525939,"transfers":0,"points_encoded":true,"points_encoded_multiplier":100000.0,"bbox":[20.983816,52.226484,20.998493,52.24942],"points":"onw}Hiab_CKDIC[?}@l@OREHKZ?DCDKJC@ANoDvC?FMJIBiEnDIGcAdAOTAAi@iCIe@?E@G?CU@KFGFCI}@v@e@Hi@sF@WAKUE_Dp@e@PuDx@sB^y@Tc@JoFdA}C`Ao@PwE`BCMC@CAAEi@HiCjA_CmH[sAC@CK@UYoACEEQKI[uAy@p@GWGCwBrAOH{@z@Qo@EFKCIF{B{JIHGQE@EO}AjAEUYTQNG@a@ZiB^CAEOIFoB_IoFiU_BqGIFgB{Hk@sC}@aDGEEBSo@IHiAgESP{@K?ECCEAED?B{AKeCSG@WEw@JHhB","instructions":[{"distance":12.461,"heading":335.24,"sign":0,"interval":[0,2],"text":"Continue","time":8972,"street_name":""},{"distance":64.83,"sign":-1,"interval":[2,5],"text":"Turn
+        slight left","time":46677,"street_name":""},{"distance":31.632,"sign":7,"interval":[5,11],"text":"Keep
+        right","time":22776,"street_name":""},{"distance":5.416,"sign":-2,"interval":[11,12],"text":"Turn
+        left","time":3900,"street_name":""},{"distance":114.24,"sign":2,"interval":[12,14],"text":"Turn
+        right","time":82253,"street_name":""},{"distance":141.196,"sign":2,"interval":[14,17],"text":"Turn
+        right","time":101662,"street_name":""},{"distance":62.503,"sign":2,"interval":[17,20],"text":"Turn
+        right","time":45002,"street_name":""},{"distance":74.65,"sign":2,"interval":[20,26],"text":"Turn
+        right","time":53750,"street_name":""},{"distance":25.033,"sign":-2,"interval":[26,29],"text":"Turn
+        left","time":18023,"street_name":""},{"distance":4.27,"sign":2,"interval":[29,30],"text":"Turn
+        right onto Prosta","time":3074,"street_name":"Prosta"},{"distance":60.878,"sign":-2,"interval":[30,32],"text":"Turn
+        left","time":45693,"street_name":""},{"distance":99.407,"sign":2,"interval":[32,35],"text":"Turn
+        right","time":71573,"street_name":""},{"distance":726.485,"sign":-2,"interval":[35,46],"text":"Turn
+        left onto Wronia","time":520403,"street_name":"Wronia"},{"distance":5.11,"sign":2,"interval":[46,47],"text":"Turn
+        right","time":3679,"street_name":""},{"distance":7.574,"sign":-2,"interval":[47,50],"text":"Turn
+        left","time":5453,"street_name":""},{"distance":104.943,"sign":-2,"interval":[50,52],"text":"Turn
+        left","time":75560,"street_name":""},{"distance":157.786,"sign":2,"interval":[52,54],"text":"Turn
+        right","time":113606,"street_name":""},{"distance":95.299,"sign":-2,"interval":[54,62],"text":"Turn
+        left","time":68615,"street_name":""},{"distance":37.496,"sign":-2,"interval":[62,63],"text":"Turn
+        left","time":26997,"street_name":""},{"distance":13.86,"sign":2,"interval":[63,65],"text":"Turn
+        right","time":9979,"street_name":""},{"distance":121.302,"sign":-7,"interval":[65,68],"text":"Keep
+        left","time":87338,"street_name":""},{"distance":18.471,"sign":2,"interval":[68,69],"text":"Turn
+        right","time":13299,"street_name":""},{"distance":10.829,"sign":-2,"interval":[69,71],"text":"Turn
+        left","time":7797,"street_name":""},{"distance":6.373,"sign":-1,"interval":[71,72],"text":"Turn
+        slight left","time":4588,"street_name":""},{"distance":146.781,"sign":2,"interval":[72,73],"text":"Turn
+        right onto Nowolipie","time":105682,"street_name":"Nowolipie"},{"distance":6.707,"sign":-2,"interval":[73,74],"text":"Turn
+        left","time":4829,"street_name":""},{"distance":10.947,"sign":2,"interval":[74,76],"text":"Turn
+        right","time":7882,"street_name":""},{"distance":6.167,"sign":2,"interval":[76,77],"text":"Turn
+        right","time":4440,"street_name":""},{"distance":58.23,"sign":-2,"interval":[77,78],"text":"Turn
+        left onto Smocza","time":41926,"street_name":"Smocza"},{"distance":8.364,"sign":2,"interval":[78,79],"text":"Turn
+        right","time":6022,"street_name":""},{"distance":121.615,"sign":-2,"interval":[79,86],"text":"Turn
+        left","time":87563,"street_name":""},{"distance":5.886,"sign":-2,"interval":[86,87],"text":"Turn
+        left","time":4238,"street_name":""},{"distance":510.773,"sign":2,"interval":[87,90],"text":"Turn
+        right onto Nowolipki","time":367154,"street_name":"Nowolipki"},{"distance":5.777,"sign":-2,"interval":[90,91],"text":"Turn
+        left","time":4159,"street_name":""},{"distance":252.153,"sign":2,"interval":[91,96],"text":"Turn
+        right","time":181550,"street_name":""},{"distance":20.191,"sign":2,"interval":[96,97],"text":"Turn
+        right","time":14538,"street_name":""},{"distance":6.435,"sign":-2,"interval":[97,98],"text":"Turn
+        left","time":4633,"street_name":""},{"distance":79.542,"sign":2,"interval":[98,99],"text":"Turn
+        right","time":55831,"street_name":""},{"distance":12.678,"sign":-2,"interval":[99,100],"text":"Turn
+        left","time":9128,"street_name":""},{"distance":33.576,"sign":7,"interval":[100,101],"text":"Keep
+        right","time":23024,"street_name":""},{"distance":4.364,"sign":2,"interval":[101,103],"text":"Turn
+        right","time":3142,"street_name":""},{"distance":9.228,"sign":-1,"interval":[103,106],"text":"Turn
+        slight left","time":6644,"street_name":""},{"distance":50.967,"sign":2,"interval":[106,107],"text":"Turn
+        right","time":36695,"street_name":""},{"distance":124.517,"sign":7,"interval":[107,111],"text":"Keep
+        right","time":89654,"street_name":""},{"distance":36.856,"sign":-2,"interval":[111,112],"text":"Turn
+        left","time":26536,"street_name":""},{"distance":0.0,"sign":4,"last_heading":261.8531715306888,"interval":[112,112],"text":"Arrive
+        at destination","time":0,"street_name":""}],"legs":[],"details":{},"ascend":29.21649169921875,"descend":30.52154541015625,"snapped_waypoints":"onw}Hiab_CanCqaA"}]}'
+  recorded_at: Sun, 27 Oct 2024 15:49:40 GMT
 recorded_with: VCR 6.0.0

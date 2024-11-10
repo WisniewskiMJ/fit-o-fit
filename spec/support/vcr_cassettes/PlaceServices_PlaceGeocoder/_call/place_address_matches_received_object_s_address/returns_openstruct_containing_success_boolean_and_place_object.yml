@@ -2,128 +2,58 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Towarowa%201,%20Warszawa,%20Polska&key=<gmaps_api_key>&language=pl
+    uri: https://graphhopper.com/api/1/geocode?debug=false&key=d0179386-cebf-4f3b-9e8a-067140d1f585&limit=5&locale=en&q=Towarowa%202,%20Warszawa,%20Polska&reverse=false
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 3.0.2 (2021-07-07))
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      Date:
-      - Sun, 07 Nov 2021 20:26:52 GMT
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 07 Nov 2021 20:26:52 GMT
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Cache-Control:
-      - no-cache, must-revalidate
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Goog-Maps-Metro-Area:
-      - Warsaw
       Server:
-      - mafe
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=8
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Accept-Ranges:
-      - none
+      - nginx
+      Date:
+      - Sun, 10 Nov 2024 01:31:12 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '482'
+      Connection:
+      - keep-alive
       Vary:
       - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset,X-RateLimit-Credits
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Remaining:
+      - '496'
+      X-Ratelimit-Reset:
+      - '80927'
+      X-Ratelimit-Credits:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
     body:
-      encoding: UTF-8
-      string: |
-        {
-           "results" : [
-              {
-                 "address_components" : [
-                    {
-                       "long_name" : "1",
-                       "short_name" : "1",
-                       "types" : [ "street_number" ]
-                    },
-                    {
-                       "long_name" : "Towarowa",
-                       "short_name" : "Towarowa",
-                       "types" : [ "route" ]
-                    },
-                    {
-                       "long_name" : "Wola",
-                       "short_name" : "Wola",
-                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
-                    },
-                    {
-                       "long_name" : "Warszawa",
-                       "short_name" : "Warszawa",
-                       "types" : [ "locality", "political" ]
-                    },
-                    {
-                       "long_name" : "Warszawa",
-                       "short_name" : "Warszawa",
-                       "types" : [ "administrative_area_level_2", "political" ]
-                    },
-                    {
-                       "long_name" : "Mazowieckie",
-                       "short_name" : "Mazowieckie",
-                       "types" : [ "administrative_area_level_1", "political" ]
-                    },
-                    {
-                       "long_name" : "Polska",
-                       "short_name" : "PL",
-                       "types" : [ "country", "political" ]
-                    },
-                    {
-                       "long_name" : "00-811",
-                       "short_name" : "00-811",
-                       "types" : [ "postal_code" ]
-                    }
-                 ],
-                 "formatted_address" : "Towarowa 1, 00-811 Warszawa, Polska",
-                 "geometry" : {
-                    "location" : {
-                       "lat" : 52.2261574,
-                       "lng" : 20.9874064
-                    },
-                    "location_type" : "ROOFTOP",
-                    "viewport" : {
-                       "northeast" : {
-                          "lat" : 52.2275063802915,
-                          "lng" : 20.9887553802915
-                       },
-                       "southwest" : {
-                          "lat" : 52.2248084197085,
-                          "lng" : 20.98605741970849
-                       }
-                    }
-                 },
-                 "place_id" : "ChIJa28qCJrMHkcR1z_HWbC96rY",
-                 "plus_code" : {
-                    "compound_code" : "6XGP+FX Warszawa, Polska",
-                    "global_code" : "9G426XGP+FX"
-                 },
-                 "types" : [ "street_address" ]
-              }
-           ],
-           "status" : "OK"
-        }
-  recorded_at: Sun, 07 Nov 2021 20:26:52 GMT
+      encoding: ASCII-8BIT
+      string: '{"hits":[{"point":{"lat":52.22603085,"lng":20.9888595919274},"extent":[20.9885371,52.2257601,20.9895595,52.2263322],"name":"Towarowa","country":"Poland","countrycode":"PL","city":"Warsaw","state":"Masovian
+        Voivodeship","street":"Towarowa","postcode":"00-811","osm_id":11687899,"osm_type":"R","housenumber":"2","osm_key":"building","osm_value":"hotel","house_number":"2"},{"point":{"lat":52.2259135,"lng":20.9888871},"name":"Campanile","country":"Poland","countrycode":"PL","city":"Warsaw","state":"Masovian
+        Voivodeship","street":"Towarowa","postcode":"00-811","osm_id":7956040948,"osm_type":"N","housenumber":"2","osm_key":"tourism","osm_value":"hotel","house_number":"2"},{"point":{"lat":52.229095099999995,"lng":20.988207431927027},"extent":[20.9854602,52.2278182,20.9906277,52.2303256],"name":"Towarowa
+        22","country":"Poland","countrycode":"PL","city":"Warsaw","state":"Masovian
+        Voivodeship","osm_id":378921162,"osm_type":"W","osm_key":"landuse","osm_value":"construction"},{"point":{"lat":52.2259028,"lng":20.9891205},"name":"The
+        Loft Bar & Restaurant","country":"Poland","countrycode":"PL","city":"Warsaw","state":"Masovian
+        Voivodeship","street":"Towarowa","postcode":"00-811","osm_id":11982922182,"osm_type":"N","housenumber":"2","osm_key":"amenity","osm_value":"restaurant","house_number":"2"},{"point":{"lat":52.2261814,"lng":20.9891129},"name":"Premiere
+        Classe","country":"Poland","countrycode":"PL","city":"Warsaw","state":"Masovian
+        Voivodeship","street":"Towarowa","postcode":"00-811","osm_id":7956040949,"osm_type":"N","housenumber":"2","osm_key":"tourism","osm_value":"hotel","house_number":"2"}],"locale":"en"}'
+  recorded_at: Sun, 10 Nov 2024 01:31:12 GMT
 recorded_with: VCR 6.0.0

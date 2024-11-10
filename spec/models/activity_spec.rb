@@ -8,7 +8,7 @@ RSpec.describe Activity, type: :model do
     it { is_expected.to validate_presence_of(:day) }
   end
 
-   describe 'associations' do
+  describe 'associations' do
     it { is_expected.to belong_to(:start) }
     it { is_expected.to belong_to(:finish) }
     it { is_expected.to belong_to(:user) }
