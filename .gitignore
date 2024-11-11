@@ -40,3 +40,5 @@ yarn-debug.log*
 .tool-versions
 
 /db/*.sqlite3
+
+/config/credentials/production.key

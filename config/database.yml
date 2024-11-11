@@ -15,9 +15,11 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  socket: /tmp/postgresql.sock
+  adapter: mysql2
+  encoding: utf8
   database: <%= ENV.fetch('FITO_DB_NAME') %>
   username: <%= ENV.fetch('FITO_DB_USER') %>
   password: <%= ENV.fetch('FITO_DB_PASS') %>
   host: <%= ENV.fetch('FITO_DB_HOST') %>
+  socket: /tmp/mysql.sock
+  collation: utf8mb3_general_ci

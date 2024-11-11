@@ -12,7 +12,6 @@ gem 'google-maps', '~> 3.0', '>= 3.0.6'
 gem 'haml-rails', '~> 2.0'
 gem 'httparty', '~> 0.22.0'
 gem 'jbuilder', '~> 2.7'
-gem 'pg', '~> 1.1'
 gem 'pry-byebug'
 gem 'pry-rails'
 gem 'puma', '~> 5.0'
@@ -34,6 +33,11 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
+  gem 'capistrano', require: false
+  gem 'capistrano-asdf'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma', require: false
 end
 
 group :test do
@@ -42,4 +46,8 @@ group :test do
   gem 'shoulda-matchers', '~> 5.0'
   gem 'vcr', '~> 6.0'
   gem 'webmock', '~> 3.14'
+end
+
+group :production do
+  gem 'mysql2', '~> 0.5'
 end
