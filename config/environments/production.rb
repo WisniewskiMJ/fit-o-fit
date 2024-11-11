@@ -69,9 +69,9 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
-  host = 'fit-o-fit.herokuapp.com'
+  host = 'fit-o-fit.micckh.dev'
   config.action_mailer.default_url_options = { host: host }
-  config.action_mailer.default_options = { from: 'no-reply@herokuapp.com' }
+  config.action_mailer.default_options = { from: 'no-reply@micckh.dev' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
