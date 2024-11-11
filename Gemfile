@@ -19,9 +19,9 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'dotenv-rails'
 
 group :development, :test do
-  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'sqlite3', '~> 1.4'
